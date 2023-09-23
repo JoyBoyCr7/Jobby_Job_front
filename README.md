@@ -4,7 +4,7 @@
 - **Project By:** Ronard Nyongkah
 - [**LINK TO GITHUB**](https://github.com/JoyBoyCr7/Jobby_Job_front)
 - [**LINK TO DEPLOYED WEBSITE**](https://ronards-project2.onrender.com/)
-- **List of Technologies used:** JS, Python, HTML, CSS, Node, Neon
+- **List of Technologies used:** JS, Python, Django, React, HTML, CSS, Node, Neon
 - [**LINK TO TRELLO**](https://trello.com/b/k8624o1E/project4)
 
 ## Description
