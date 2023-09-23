@@ -2,7 +2,7 @@
 
 - **Project Name:** Jobby Job
 - **Project By:** Ronard Nyongkah
-- [**LINK TO GITHUB**](https://github.com/JoyBoyCr7/Ronard-s-Project)
+- [**LINK TO GITHUB**](https://github.com/JoyBoyCr7/Jobby_Job_front)
 - [**LINK TO DEPLOYED WEBSITE**](https://ronards-project2.onrender.com/)
 - **List of Technologies used:** JS, Python, HTML, CSS, Node, Neon
 - [**LINK TO TRELLO**](https://trello.com/b/k8624o1E/project4)
@@ -16,13 +16,12 @@ This app is an app that allows the users to keep track of the jobs they may be a
 
 | ENDPOINT | METHOD | PURPOSE |
 |----------|--------|---------|
-| /Shows | Get | list all Shows |
-|/Shows/new | Get | Show a form to add a new show |
-|/Shows/:id | Delete | Remove a show from the DB |
-|/Shows/:id | Put | Update a show's data |
-|/Shows | Post | Show that was created is added to DB and user is redirected |
-|/Shows/:id/edit | get | Show a form prefilled with the show's current data to be edited then trigger the update route|
-|/Shows/:id | get | Show one Show |
+| / | Get | Show all jobs |
+|/:id | Get | Show one job|
+|/create | Post |Add a new job |
+|/update/:id | Put | Update a show's data |
+|/delete/:id | Delete | Remove a Job from the DB list|
+
 
 ## Mock UP of UI
 
