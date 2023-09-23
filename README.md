@@ -3,7 +3,7 @@
 - **Project Name:** Jobby Job
 - **Project By:** Ronard Nyongkah
 - [**LINK TO GITHUB**](https://github.com/JoyBoyCr7/Jobby_Job_front)
-- [**LINK TO DEPLOYED WEBSITE**](https://ronards-project2.onrender.com/)
+- [**LINK TO DEPLOYED WEBSITE**](https://jobby-job-front.vercel.app/)
 - **List of Technologies used:** JS, Python, Django, React, HTML, CSS, Node, Neon
 - [**LINK TO TRELLO**](https://trello.com/b/k8624o1E/project4)
 
