@@ -1,9 +1,7 @@
 import {FaStar} from 'react-icons/fa'
 import { useState } from 'react';
-import Index from '../pages';
 
 const StarRating = (props) => {
-    const [rating, setRating] = useState(null)
     const [hover, setHover] = useState(null)
     return ( 
     <div>
@@ -12,8 +10,8 @@ const StarRating = (props) => {
         return (
             // it got tuff here but growth happened
         <label key={ind}>
-            <input style={{display:'none'}} type='radio' value={ratingValue} onClick={() => setRating(ratingValue)} />
-            <FaStar className='star' color={ratingValue <= ( hover || rating ) ? "#FFD700": "#6B6B6B"} size={20} onMouseEnter={() => setHover(ratingValue)} onMouseLeave={() => setHover(null)}/>
+            <input style={{display:'none'}} type='radio' value={ratingValue}  onClick={() => props.changeRating(ratingValue)}/>
+            <FaStar className='star' color={ratingValue <= ( hover || props.rating) ? "#FFD700": "#6B6B6B"} size={20} onMouseEnter={() => setHover(ratingValue)} onMouseLeave={() => setHover(null)}/>
         </label> 
         );
          })}

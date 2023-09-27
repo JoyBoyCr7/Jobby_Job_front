@@ -42,5 +42,15 @@
   justify-content: center;
   gap: 5px;
   margin: 0px ;
+  margin: 0px auto;
 }
-
+.container{
+  width: 50%;
+  margin: 0px auto;
+  background-color: #9df9ef;
+}
+.Mainform{
+  width: 55%;
+  margin: 0px auto;
+  background-color: #e5eaf5;
+}
