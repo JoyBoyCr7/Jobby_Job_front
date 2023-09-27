@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-const Job = ({job}) => {
+const Job = ({job,rating}) => {
   console.log(job.role)
   return (
     <div>
@@ -8,6 +8,7 @@ const Job = ({job}) => {
           <h2 >{job.role}</h2> <div> <h2 >{job.interest_level}</h2> 
           </div> 
         </div>
+        <h1>yooo{rating}</h1>
         <h3 style={{margin:'0px auto'}}>{job.location}</h3>
         <p>{job.description}</p>
       </div>

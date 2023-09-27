@@ -36,7 +36,7 @@ const Index = () => {
         <div>
           <label> <h3>Description</h3> </label>
           <div>
-          <input type="text" name="description" placeholder="Description"></input>
+          <textarea input-type="textarea" name="description" placeholder="Description"/>
           </div>
         </div>
         <div>
@@ -55,7 +55,7 @@ const Index = () => {
       </Form>
     </div>
   </div>
-  {jobs.map((job) => <Job job={job} key={job.id} />)}
+  {jobs.map((job) => <Job job={job} key={job.id} rating={rating}/>)}
   </>;
 };
 
