@@ -1,7 +1,10 @@
 import { useLoaderData, Form } from "react-router-dom";
 import Job from "../components/Job";
+import StarRating from "../components/Stars";
+import { useState } from "react";
 const Index = (props) => {
   const jobs = useLoaderData()
+  const [rating, setRating] = useState(null)
   return <>
   <div>
     <h2>ADD A Job</h2>
