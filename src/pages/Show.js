@@ -14,22 +14,42 @@ const Show = () => {
     <div >
       <h1>{job.role}</h1>
       <h2>{job.description}</h2>
-      <div>
-        <h2> EDIT JOB</h2>
-        <Form method="post" action={`/update/${job.id}`}>
-          <input type="text" name="role" placeholder="Role" defaultValue={job.role}></input>
-          <input type="text" name="location" placeholder="Location" defaultValue={job.location}></input>
-          <input type="text" name="brand Image" placeholder="Brand Image" defaultValue={job.brand_image}></input>
-          <input type="text" name="description" placeholder="Description" defaultValue={job.description}></input>
-          <StarRating changeRating={changeRating} rating={rating}/>
-          <input type="number" value={rating ? rating: '0' } name="interest Level" readOnly={true} style={{display: 'none'}}/>
-          {/* <input type="number" min="1" max="5" name="interest Level" placeholder="Interest Level" defaultValue={job.interest_level}></input> */}
-          <input type="date" name="application Date" placeholder="Application Date" defaultValue={job.application_date}></input>
-          <button>CONFORM</button>
-        </Form >
-        <Form method="post" action={`/delete/${job.id}`}>
-          <button>DELETE JOB</button>
-        </Form>
+      <div className="maindiv">
+        <div className="form-container ">
+          <h2> EDIT JOB</h2>
+          <Form className="form" method="post" action={`/update/${job.id}`}>
+            <div className="form-group">
+              <label for="role">Role</label>
+              <input id="role" type="text" name="role" placeholder="Role" defaultValue={job.role}></input>
+            </div>
+            <div className="form-group">
+              <label>Location</label>
+              <input type="text" name="location" placeholder="Location" defaultValue={job.location}></input>
+            </div>
+            <div className="form-group">
+              <label>Brand Image</label>
+              <input type="text" name="brand Image" placeholder="Brand Image" defaultValue={job.brand_image}></input>
+            </div>
+            <div className="form-group">
+              <label>Description</label>
+              <textarea type="text" name="description" placeholder="Description" defaultValue={job.description} style={{boxSizing:"border-box"}}></textarea>
+            </div>
+            <div className="form-group">
+              <label>Application Date</label>
+              <input type="date" name="application Date" placeholder="Application Date" defaultValue={job.application_date}></input>
+            </div>
+            <div >
+              <label>Rating</label>
+                <StarRating changeRating={changeRating} rating={rating}/>
+            </div>
+              <input type="number" value={rating ? rating: '0' } name="interest Level" readOnly={true} style={{display: 'none'}}/>
+              {/* <input type="number" min="1" max="5" name="interest Level" placeholder="Interest Level" defaultValue={job.interest_level}></input> */}
+              <button type="submit" className="form-submit-btn">CONFORM</button>
+          </Form >
+          {/* <Form method="post" action={`/delete/${job.id}`}>
+            <button>DELETE JOB</button>
+          </Form> */}
+        </div>
       </div>
       <Link to="/">
         <button>Go Back</button>
