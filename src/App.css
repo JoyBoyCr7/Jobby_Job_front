@@ -50,7 +50,36 @@
   background-color: #9df9ef;
 }
 .Mainform{
-  width: 55%;
+  width: 60%;
   margin: 0px auto;
   background-color: #e5eaf5;
+  padding: 3rem;
+}
+.label{
+  display: block;
+  text-align: left;
+  padding-bottom: 5px;
+}
+
+.row{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.textcol{
+  width: 100%;
+}
+
+.col{
+  width: 45%;
+}
+
+input{
+ width: 100%;
+ box-sizing: border-box; 
+}
+
+body{
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }

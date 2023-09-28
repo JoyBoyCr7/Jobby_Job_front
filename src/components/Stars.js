@@ -4,8 +4,8 @@ import { useState } from 'react';
 const StarRating = (props) => {
     const [hover, setHover] = useState(null)
     return ( 
-    <div>
-        {[...Array(5)].map((item, ind) => {
+    <div style={{textAlign : "left"}}>
+        {[...Array(5)].map((item, ind, offHover) => {
             const ratingValue = ind + 1
         return (
             // it got tuff here but growth happened
