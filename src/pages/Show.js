@@ -19,7 +19,7 @@ const Show = () => {
           <h2> EDIT JOB</h2>
           <Form className="form" method="post" action={`/update/${job.id}`}>
             <div className="form-group">
-              <label for="role">Role</label>
+              <label >Role</label>
               <input id="role" type="text" name="role" placeholder="Role" defaultValue={job.role}></input>
             </div>
             <div className="form-group">
@@ -44,11 +44,11 @@ const Show = () => {
             </div>
               <input type="number" value={rating ? rating: '0' } name="interest Level" readOnly={true} style={{display: 'none'}}/>
               {/* <input type="number" min="1" max="5" name="interest Level" placeholder="Interest Level" defaultValue={job.interest_level}></input> */}
-              <button type="submit" className="form-submit-btn">CONFORM</button>
+              <button type="submit" className="mainbutton">CONFORM</button>
           </Form >
-          {/* <Form method="post" action={`/delete/${job.id}`}>
+          <Form method="post" action={`/delete/${job.id}`}>
             <button>DELETE JOB</button>
-          </Form> */}
+          </Form>
         </div>
       </div>
       <Link to="/">

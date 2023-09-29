@@ -19,7 +19,8 @@ export const createAction = async ({request}) => {
             "Content-Type": "application/json"
         },
         body: JSON.stringify(newJob)
-    })
+    }).catch((error)=> console.log(error))
+    
     return redirect("/")
 }
 
