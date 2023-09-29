@@ -2,6 +2,7 @@ import { useLoaderData, Form } from "react-router-dom";
 import Job from "../components/Job";
 import StarRating from "../components/Stars";
 import { useState } from "react";
+import SimpleSlider from "../components/slider";
 
 const Index = () => {
   const jobs = useLoaderData()
@@ -66,7 +67,8 @@ const Index = () => {
       </Form>
     </div>
   </div>
-  {jobs.map((job) => <Job job={job} key={job.id} />)}
+  
+  <SimpleSlider divs={jobs.map((job) => <Job job={job} key={job.id} />)}/>
   </>;
 };
 
