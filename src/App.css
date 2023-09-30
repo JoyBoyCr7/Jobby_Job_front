@@ -86,6 +86,7 @@ body{
 .maindiv{
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .star{
@@ -146,3 +147,4 @@ body{
               0.3em 0.3em 1em rgba(0,0,0,0.3);
  }
  
+

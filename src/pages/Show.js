@@ -12,7 +12,14 @@ const Show = () => {
   };
   return (
     <div >
-      <h1>{job.location}</h1>
+      <Link to="/">
+        <button style={{display:"flex", marginTop:"10px", marginLeft:"10px"}} className="btn-31">
+          <span className="text-container">
+            <span className="text">Go Back</span>
+          </span>
+      </button>
+      </Link>
+      <h1 style={{marginTop:"0px"}}>{job.location}</h1>
       <div className="maindiv">
         <div className="form-container ">
           <h2> EDIT JOB</h2>
@@ -47,8 +54,8 @@ const Show = () => {
               {/* <input type="number" min="1" max="5" name="interest Level" placeholder="Interest Level" defaultValue={job.interest_level}></input> */}
               <button type="submit" className="mainbutton">CONFORM</button>
           </Form >
-          <Form method="post" action={`/delete/${job.id}`}>
-            <button>DELETE JOB</button>
+          <Form method="post" action={`/delete/${job.id}`} className="form">
+            <button className="button2">DELETE JOB</button>
           </Form>
         </div>
         <div className="card shadow">
@@ -56,9 +63,9 @@ const Show = () => {
           <p>{job.description}</p>
         </div>
       </div>
-      <Link to="/">
+      {/* <Link to="/">
         <button>Go Back</button>
-      </Link>
+      </Link> */}
     </div>
   );
 };
