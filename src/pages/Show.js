@@ -12,7 +12,7 @@ const Show = () => {
   };
   return (
     <div >
-      <Link to="/">
+      <Link to="/" style={{textDecoration:"none"}}>
         <button style={{display:"flex", marginTop:"10px", marginLeft:"10px"}} className="btn-31">
           <span className="text-container">
             <span className="text">Go Back</span>

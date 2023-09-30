@@ -13,8 +13,9 @@ const Index = () => {
   return <>
   <div>
     <div className="container">
-      <h2>ADD A Job</h2>
+      <h2>Jobby Job</h2>
       <Form className="Mainform" method="post" action="/create">
+        <h3 style={{marginTop:"0px"}}>ADD A Job</h3>
         <div className="row">
           <div className="col">
             <div className="input-group">
