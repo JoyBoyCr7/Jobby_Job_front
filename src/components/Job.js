@@ -6,16 +6,19 @@ const Job = ({job}) => {
   return (
     <div>
       
-      <div className="main">
+      <div className="main" style={{marginRight:"10px"}}>
         <div className="role"> 
-          <h2> {job.role}</h2> <div> <h2 ><Starfrozen rating={rating}/></h2> 
-          </div> 
+          <h2> {job.role}</h2> <h2><Starfrozen rating={rating}/></h2> 
         </div>
-        <h3 style={{margin:'0px auto'}}>{job.location}</h3>
-        <p>{job.description}</p>
+        <div className="role">
+          <h3 style={{marginTop:"0px",marginBottom:"0px"}}>{job.location} {job.application_date}</h3>
+        </div>
+        <div className="role">
+          <p style={{textAlign:"left"}}>{job.description}</p>
+        </div>
       </div>
-        <Link to={`/jobs/${job.id}`}>
-        <h1>{job.role}</h1>
+        <Link to={`/jobs/${job.id}`} className="details" style={{display:"flex"}}>
+        Manage Details
         </Link>
     </div>
     
