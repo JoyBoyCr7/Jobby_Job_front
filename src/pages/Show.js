@@ -26,11 +26,11 @@ const Show = () => {
           <Form className="form" method="post" action={`/update/${job.id}`}>
             <div className="form-group">
               <label >Role</label>
-              <input id="role" type="text" name="role" placeholder="Role" defaultValue={job.role}></input>
+              <input id="role" type="text" name="role" placeholder="Role" defaultValue={job.role} required></input>
             </div>
             <div className="form-group">
               <label>Location</label>
-              <input type="text" name="location" placeholder="Location" defaultValue={job.location}></input>
+              <input type="text" name="location" placeholder="Location" defaultValue={job.location} required></input>
             </div>
             {/* <div className="form-group">
               <label>Brand Image</label>
@@ -38,11 +38,11 @@ const Show = () => {
             </div> */}
             <div className="form-group">
               <label>Description</label>
-              <textarea type="text" name="description" placeholder="Description" defaultValue={job.description} style={{boxSizing:"border-box"}}></textarea>
+              <textarea type="text" name="description" placeholder="Description" defaultValue={job.description} style={{boxSizing:"border-box"}} required></textarea>
             </div>
             <div className="form-group">
               <label>Application Date</label>
-              <input type="date" name="application Date" placeholder="Application Date" defaultValue={job.application_date}></input>
+              <input type="date" name="application Date" placeholder="Application Date" defaultValue={job.application_date} required></input>
             </div>
             <div className="ypp" >
               <label>Rating</label>
