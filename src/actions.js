@@ -6,7 +6,7 @@ export const createAction = async ({request}) => {
     const newJob = {
         role: formData.get("role"),
         location: formData.get("location"),
-        brand_image: formData.get("brand Image"),
+        // brand_image: formData.get("brand Image"),
         description: formData.get("description"),
         interest_level: formData.get("interest Level"),
         application_date: formData.get("application Date")
@@ -32,7 +32,7 @@ export const updateAction = async ({request, params}) => {
     const updatedJob = {
         role: formData.get("role"),
         location: formData.get("location"),
-        brand_image: formData.get("brand Image"),
+        // brand_image: formData.get("brand Image"),
         description: formData.get("description"),
         interest_level: formData.get("interest Level"),
         application_date: formData.get("application Date")

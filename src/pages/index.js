@@ -31,16 +31,22 @@ const Index = () => {
         </div>
         
         <div className="row">
-          <div className="col">
+          {/* <div className="col">
             <div className="input-group">
               <label className="label"> Brand Image</label> 
               <input type="text" name="brand Image" placeholder="Brand Image" className="input"></input>
             </div>
-          </div>
+          </div> */}
           <div className="col">
             <div className="input-group">
               <label className="label"> Date of Application </label>
               <input type="date" name="application Date" placeholder="Application Date" className="input"></input> 
+            </div>
+          </div>
+          <div className="col">
+            <div className="input-group">
+              <label className="label"> Give your overall interest in this role</label>
+              <StarRating changeRating={changeRating} rating={rating}/>
             </div>
           </div>
         </div>
@@ -53,12 +59,12 @@ const Index = () => {
           </div>
         </div>
         <div className="row">
-          <div className="col">
+          {/* <div className="col">
             <div className="input-group">
               <label className="label"> Give your overall interest in this role</label>
               <StarRating changeRating={changeRating} rating={rating}/>
             </div>
-          </div>
+          </div> */}
           
         </div>
         <label> <input type="number" value={rating ? rating: '0' } name="interest Level" readOnly={true} style={{display: 'none'}}/></label>

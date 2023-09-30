@@ -13,7 +13,6 @@ const Show = () => {
   return (
     <div >
       <h1>{job.role}</h1>
-      <h2>{job.description}</h2>
       <div className="maindiv">
         <div className="form-container ">
           <h2> EDIT JOB</h2>
@@ -26,10 +25,10 @@ const Show = () => {
               <label>Location</label>
               <input type="text" name="location" placeholder="Location" defaultValue={job.location}></input>
             </div>
-            <div className="form-group">
+            {/* <div className="form-group">
               <label>Brand Image</label>
               <input type="text" name="brand Image" placeholder="Brand Image" defaultValue={job.brand_image}></input>
-            </div>
+            </div> */}
             <div className="form-group">
               <label>Description</label>
               <textarea type="text" name="description" placeholder="Description" defaultValue={job.description} style={{boxSizing:"border-box"}}></textarea>
@@ -38,9 +37,11 @@ const Show = () => {
               <label>Application Date</label>
               <input type="date" name="application Date" placeholder="Application Date" defaultValue={job.application_date}></input>
             </div>
-            <div >
+            <div className="ypp" >
               <label>Rating</label>
-                <StarRating changeRating={changeRating} rating={rating}/>
+              <div style={{display:"flex", justifyContent:"center"}}>
+                <StarRating changeRating={changeRating} rating={rating} />
+              </div>
             </div>
               <input type="number" value={rating ? rating: '0' } name="interest Level" readOnly={true} style={{display: 'none'}}/>
               {/* <input type="number" min="1" max="5" name="interest Level" placeholder="Interest Level" defaultValue={job.interest_level}></input> */}
