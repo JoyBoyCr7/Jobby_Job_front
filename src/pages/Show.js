@@ -12,7 +12,7 @@ const Show = () => {
   };
   return (
     <div >
-      <h1>{job.role}</h1>
+      <h1>{job.location}</h1>
       <div className="maindiv">
         <div className="form-container ">
           <h2> EDIT JOB</h2>
@@ -50,6 +50,10 @@ const Show = () => {
           <Form method="post" action={`/delete/${job.id}`}>
             <button>DELETE JOB</button>
           </Form>
+        </div>
+        <div className="card shadow">
+          <h1>{job.role}</h1>
+          <p>{job.description}</p>
         </div>
       </div>
       <Link to="/">
