@@ -1,4 +1,5 @@
-const url="http://localhost:4000/jobs/"
+const url="https://jobby-job.onrender.com/jobs/"
 
 export default url
-//
+
+//bac
