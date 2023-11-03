@@ -1,5 +1,61 @@
 import { redirect } from 'react-router-dom'
 import url from './url'
+
+export const signupAction = async ({request}) => {
+    const formData = await request.formData()
+
+    const user = {
+        userName: formData.get("userName"),
+        password: formData.get("password")
+    }
+    console.log(user)
+    const response = await fetch(url + "/auth/signup", {
+        method: "post",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(user)
+    })
+
+    if (response.status === 400){
+        alert("Could not signup, please try again")
+        return redirect("/signup")
+    }
+    alert("Welcome to TopRated!")
+    return redirect("/")
+}
+
+
+export const loginAction = async ({request}) => {
+    const formData = await request.formData()
+
+    const user = {
+        userName: formData.get("userName"),
+        password: formData.get("password")
+    }
+
+    const response = await fetch(url + "/auth/login/", {
+        method: "post",
+        credentials: "include",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(user)
+    })
+
+    if (response.status === 400){
+        alert("Could not login, please try again")
+        return redirect("")
+    }
+
+    localStorage.setItem("Loggedin", "true")
+
+    return redirect("/home")
+}
+
+
+
+
 export const createAction = async ({request}) => {
     const formData = await request.formData()
 
@@ -8,20 +64,21 @@ export const createAction = async ({request}) => {
         location: formData.get("location"),
         // brand_image: formData.get("brand Image"),
         description: formData.get("description"),
-        interest_level: formData.get("interest Level"),
+        intrest_level: Number(formData.get("interest Level")),
         application_date: formData.get("application Date")
     }
     console.log(newJob)
 
-    await fetch(url, {
+    await fetch(url + "/job", {
         method: "post",
+        credentials: "include",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify(newJob)
     }).catch((error)=> console.log(error))
-    
-    return redirect("/")
+    console.count()
+    return redirect("/home")
 }
 
 export const updateAction = async ({request, params}) => {
@@ -34,11 +91,12 @@ export const updateAction = async ({request, params}) => {
         location: formData.get("location"),
         // brand_image: formData.get("brand Image"),
         description: formData.get("description"),
-        interest_level: formData.get("interest Level"),
+        intrest_level: formData.get("interest Level"),
         application_date: formData.get("application Date")
     }
 
-    await fetch(url + `${id}/`, {
+    await fetch(url + `/job/${id}`, {
+        credentials: "include",
         method: "put",
         headers: {
             "Content-Type": "application/json"
@@ -54,10 +112,11 @@ export const deleteAction = async ({params}) => {
    
     const id = params.id
 
-    await fetch(url + `${id}/`, {
+    await fetch(url + `/job/${id}`, {
+        credentials: "include",
         method: "delete",
     })
 
     // redirect back to show page page
-    return redirect("/")
+    return redirect("/home")
 }

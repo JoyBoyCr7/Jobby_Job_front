@@ -2,7 +2,9 @@ import { Link } from "react-router-dom";
 import StarRating from "./Stars";
 import Starfrozen from "./Starsfrozen";
 const Job = ({job}) => {
-  const rating = job.interest_level
+  console.log(job)
+  const rating = job.intrest_level
+  console.log(`story ${job._id}`)
   return (
     <div>
       
@@ -17,7 +19,7 @@ const Job = ({job}) => {
           <p style={{textAlign:"left", fontFamily:"NAMU, sans-serif"}}  >{job.description}</p>
         </div>
       </div>
-        <Link to={`/jobs/${job.id}`} className="details" style={{display:"flex"}}>
+        <Link to={`/jobs/${job._id}`} className="details" style={{display:"flex"}}>
         Manage Details
         </Link>
     </div>

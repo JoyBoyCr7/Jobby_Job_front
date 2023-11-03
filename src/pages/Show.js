@@ -4,7 +4,8 @@ import { useState } from "react";
 // destructuring the props needed to get our post, including router prop match
 const Show = () => {
   const job = useLoaderData();
-  const initialRating = job.interest_level
+  console.log(job)
+  const initialRating = job.intrest_level
   const [rating, setRating] = useState(initialRating)
   console.log(rating)
   const changeRating = (newRating) => {
@@ -12,7 +13,7 @@ const Show = () => {
   };
   return (
     <div >
-      <Link to="/" style={{textDecoration:"none"}}>
+      <Link to="/home" style={{textDecoration:"none"}}>
         <button style={{display:"flex", marginTop:"10px", marginLeft:"10px"}} className="btn-31">
           <span className="text-container">
             <span className="text">Go Back</span>
@@ -23,7 +24,7 @@ const Show = () => {
       <div className="maindiv">
         <div className="form-container ">
           <h2> EDIT JOB</h2>
-          <Form className="form" method="post" action={`/update/${job.id}`}>
+          <Form className="form" method="post" action={`/update/${job._id}`}>
             <div className="form-group">
               <label >Role</label>
               <input id="role" type="text" name="role" placeholder="Role" defaultValue={job.role} required></input>
@@ -54,7 +55,7 @@ const Show = () => {
               {/* <input type="number" min="1" max="5" name="interest Level" placeholder="Interest Level" defaultValue={job.interest_level}></input> */}
               <button type="submit" className="mainbutton">CONFORM</button>
           </Form >
-          <Form method="post" action={`/delete/${job.id}`} className="form">
+          <Form method="post" action={`/delete/${job._id}`} className="form">
             <button className="button2">DELETE JOB</button>
           </Form>
         </div>
