@@ -4,10 +4,8 @@ import { useState } from "react";
 // destructuring the props needed to get our post, including router prop match
 const Show = () => {
   const job = useLoaderData();
-  console.log(job)
   const initialRating = job.intrest_level
   const [rating, setRating] = useState(initialRating)
-  console.log(rating)
   const changeRating = (newRating) => {
     setRating(newRating);
   };

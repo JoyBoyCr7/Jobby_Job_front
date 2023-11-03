@@ -1,20 +1,20 @@
 import { Form, Link } from "react-router-dom"
 const Login = () => {
     return <div style={{display:"flex", justifyContent:"center", marginTop: "12rem"}}> <Form action="" method="post" className="form">
-       <p class="form-title">Sign in to your account</p>
-        <div class="input-container">
+       <p className="form-title">Sign in to your account</p>
+        <div className="input-container">
         <input type="text" name="userName" placeholder="Username" required></input>
 
       </div>
-      <div class="input-container">
+      <div className="input-container">
       <input type="password" name="password" placeholder="Password" required></input>
 
         </div>
-         <button class="submit" type="submit">
+         <button className="submit" type="submit">
         Sign in
       </button>
 
-      <p class="signup-link">
+      <p className="signup-link">
         No account?
         <Link to={"/signup"} style={{textDecoration:"none"}}> Signup</Link>
       </p>

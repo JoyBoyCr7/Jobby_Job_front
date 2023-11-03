@@ -6,8 +6,6 @@ function isEmpty(event){
   const nodeOne = allInputNodes[0].value
   console.log(nodeOne, nodeTwo)
   if ( nodeOne.trim() === "" || nodeTwo.trim() === ""){
-    console.log("boxxing")
-    console.log()
     const price = (allInputNodes[0].value)
     event.preventDefault()
     alert("You must have a username and password.")
@@ -23,16 +21,16 @@ function isEmpty(event){
 const Signup = () => {
     return <div style={{display:"flex", justifyContent:"center", marginTop: "12rem"}}> 
         <Form action="/signup" method="post" className="form">
-       <p class="form-title">Sign up for your account</p>
-        <div class="input-container">
+       <p className="form-title">Sign up for your account</p>
+        <div className="input-container">
         <input type="text" name="userName" placeholder="Username" className="userInput" required></input>
 
       </div>
-      <div class="input-container">
+      <div className="input-container">
       <input type="password" name="password" placeholder="Password" className="userInput" required></input>
 
         </div>
-         <button class="submit" type="submit" onClick={isEmpty}>
+         <button className="submit" type="submit" onClick={isEmpty}>
         Sign up
       </button>
     </Form>

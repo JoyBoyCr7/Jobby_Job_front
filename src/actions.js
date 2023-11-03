@@ -54,7 +54,18 @@ export const loginAction = async ({request}) => {
 }
 
 
+export const logoutAction = async () => {
+    const response = await fetch(url + "/auth/logout", {
+        method: "get",
+    })
+    if (response.status > 400){
+        alert("Could not log out, please try again")
+        return redirect("/dashboard")
+    }
 
+    localStorage.removeItem("loggedIn")
+    return redirect("/")
+}
 
 export const createAction = async ({request}) => {
     const formData = await request.formData()
