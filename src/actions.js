@@ -21,7 +21,7 @@ export const signupAction = async ({request}) => {
         alert("Could not signup, please try again")
         return redirect("/signup")
     }
-    alert("Welcome to TopRated!")
+    alert("Welcome to Jobby Job!")
     return redirect("/")
 }
 
@@ -49,7 +49,7 @@ export const loginAction = async ({request}) => {
     }
 
     localStorage.setItem("Loggedin", "true")
-
+    alert("Fetching Data.")
     return redirect("/home")
 }
 
