@@ -82,7 +82,7 @@ const Index = () => {
     </div>
   </div>
   
-  <SimpleSlider divs={jobs.map((job) => <Job job={job} key={job.id} />)}/>
+  <SimpleSlider divs={jobs.map((job) => <Job job={job} key={job._id} />)}/>
   </>;
 };
 

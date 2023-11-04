@@ -20,7 +20,7 @@ function isEmpty(event){
 
 const Signup = () => {
     return <div style={{display:"flex", justifyContent:"center", marginTop: "12rem"}}> 
-        <Form action="/signup" method="post" className="form">
+        <Form action="/signup" method="post" className="form1">
        <p className="form-title">Sign up for your account</p>
         <div className="input-container">
         <input type="text" name="userName" placeholder="Username" className="userInput" required></input>

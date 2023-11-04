@@ -1,6 +1,6 @@
 import { Form, Link } from "react-router-dom"
 const Login = () => {
-    return <div style={{display:"flex", justifyContent:"center", marginTop: "12rem"}}> <Form action="" method="post" className="form">
+    return <div style={{display:"flex", justifyContent:"center", marginTop: "12rem"}}> <Form action="" method="post" className="form1">
        <p className="form-title">Sign in to your account</p>
         <div className="input-container">
         <input type="text" name="userName" placeholder="Username" required></input>
