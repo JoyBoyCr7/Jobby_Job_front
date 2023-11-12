@@ -49,7 +49,6 @@ export const loginAction = async ({request}) => {
     }
 
     localStorage.setItem("Loggedin", "true")
-    alert("Fetching Data.")
     return redirect("/home")
 }
 
