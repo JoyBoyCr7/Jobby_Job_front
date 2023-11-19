@@ -8,9 +8,11 @@ function loginAccess(){
     alert("Fetching data, please allow 10 seconds to pass")
   }
 }
-
+{alert("If you are using safari, make sure you have web site tracking dissabled in settings. Without doing so, the application will data retrieval the data. Using Chrome allows you to bypass this."
+      )}
 const Login = () => {
-    return <div style={{display:"flex", justifyContent:"center", marginTop: "12rem"}}> <Form action="" method="post" className="form1">
+    return <div style={{display:"flex", justifyContent:"center", marginTop: "12rem"}}>
+       <Form action="" method="post" className="form1">
        <p className="form-title">Sign in to your account</p>
         <div className="input-container">
         <input type="text" name="userName" placeholder="Username" required className="userloginform"></input>
