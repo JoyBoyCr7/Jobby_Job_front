@@ -122,7 +122,8 @@ body{
  }
 
 .slick-slider{
-  margin-left: 40px;
+  margin: 0px auto;
+  width: 90%;
 }
 
 .slick-track{

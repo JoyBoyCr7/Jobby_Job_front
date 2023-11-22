@@ -4,6 +4,8 @@ import StarRating from "../components/Stars";
 import { useState } from "react";
 import SimpleSlider from "../components/slider";
 
+const showNumber = 1
+
 const Index = () => {
   const jobs = useLoaderData()
   const [rating, setRating] = useState(null)
@@ -82,7 +84,8 @@ const Index = () => {
     </div>
   </div>
   
-  <SimpleSlider divs={jobs.map((job) => <Job job={job} key={job._id} />)}/>
+  
+  <SimpleSlider divs={jobs.map((job) => <Job job={job} key={job._id} />)} />
   </>;
 };
 

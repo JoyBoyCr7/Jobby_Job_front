@@ -8,7 +8,7 @@ function loginAccess(){
     alert("Fetching data, please allow 10 seconds to pass")
   }
 }
-{alert("If you are using safari, make sure you have web site tracking dissabled in settings. Without doing so, the application will data retrieval the data. Using Chrome allows you to bypass this."
+{alert("If you are using Safari, please make sure you have website tracking disabled in settings under privacy. Without doing so, the application will not retrieve the data. Using Chrome allows you to bypass this."
       )}
 const Login = () => {
     return <div style={{display:"flex", justifyContent:"center", marginTop: "12rem"}}>
