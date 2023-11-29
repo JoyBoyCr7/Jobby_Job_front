@@ -15,14 +15,13 @@ const Index = () => {
   return <>
   <div>
   <Form action="/logout" method="post" style={{textDecoration:"none", display:"flex", justifyContent:"right"}}>
-        <button style={{display:"flex", marginTop:"10px", marginLeft:"10px", marginRight:"3rem"}} className="btn-31">
+        <button style={{display:"flex", marginTop:"1rem", marginRight:"1rem"}} className="btn-31">
           <span className="text-container">
             <span className="text">Log out</span>
           </span>
       </button>
     </Form>
   <div><h2>Jobby Job</h2> </div>
-    <div className="container">
       <Form className="Mainform" method="post" action="/create">
         <h3 style={{marginTop:"0px"}}>ADD A Job</h3>
         <div className="row">
@@ -81,10 +80,7 @@ const Index = () => {
         {/* <input type="number" min="1" max="5" name="interest Level" placeholder="Interest Level"></input> */}
         <button className="mainbutton">Add This Job</button>
       </Form>
-    </div>
   </div>
-  
-  
   <SimpleSlider divs={jobs.map((job) => <Job job={job} key={job._id} />)} />
   </>;
 };
