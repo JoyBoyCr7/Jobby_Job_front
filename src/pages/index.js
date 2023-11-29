@@ -28,13 +28,13 @@ const Index = () => {
           <div className="col">
             <div className="input-group">
               <label className="label"> Role </label>
-              <input type="text" name="role" placeholder="Role" className="input" required></input>
+              <div style={{display:"flex"}}><input type="text" name="role" placeholder="Role" className="input" required></input></div>
             </div>
           </div>
           <div className="col">
             <div className="input-group">
               <label className="label"> Location </label> 
-              <input type="text" name="location" placeholder="Location" className="input" required></input>
+              <div style={{display:"flex"}}><input type="text" name="location" placeholder="Location" className="input" required></input></div>
             </div>
           </div>
         </div>
@@ -49,7 +49,7 @@ const Index = () => {
           <div className="col">
             <div className="input-group">
               <label className="label"> Date of Application </label>
-              <input type="date" name="application Date" placeholder="Application Date" className="input" required></input> 
+              <div style={{display:"flex"}}><input type="date" name="application Date" placeholder="Application Date" className="input" required></input></div>
             </div>
           </div>
           <div className="col">
