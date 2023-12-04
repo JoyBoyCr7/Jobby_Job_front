@@ -12,7 +12,6 @@ const Index = () => {
   };
   return <>
   <div>
-    <div className="container">
       <h2>Jobby Job</h2>
       <Form className="Mainform" method="post" action="/create">
         <h3 style={{marginTop:"0px"}}>ADD A Job</h3>
@@ -20,13 +19,13 @@ const Index = () => {
           <div className="col">
             <div className="input-group">
               <label className="label"> Role </label>
-              <input type="text" name="role" placeholder="Role" className="input" required></input>
+              <div style={{display: "flex"}}><input type="text" name="role" placeholder="Role" className="input" required></input></div>
             </div>
           </div>
           <div className="col">
             <div className="input-group">
               <label className="label"> Location </label> 
-              <input type="text" name="location" placeholder="Location" className="input" required></input>
+              <div style={{display: "flex"}}><input type="text" name="location" placeholder="Location" className="input" required></input></div>
             </div>
           </div>
         </div>
@@ -41,7 +40,7 @@ const Index = () => {
           <div className="col">
             <div className="input-group">
               <label className="label"> Date of Application </label>
-              <input type="date" name="application Date" placeholder="Application Date" className="input" required></input> 
+              <div style={{display: "flex"}}><input type="date" name="application Date" placeholder="Application Date" className="input" required></input> </div>
             </div>
           </div>
           <div className="col">
@@ -73,7 +72,6 @@ const Index = () => {
         <button className="mainbutton">Add This Job</button>
       </Form>
     </div>
-  </div>
   
   <SimpleSlider divs={jobs.map((job) => <Job job={job} key={job.id} />)}/>
   </>;
