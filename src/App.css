@@ -85,8 +85,8 @@ body{
 }
 
 .maindiv{
-  padding-left: 15rem;
-  padding-right: 15rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
